@@ -21,6 +21,7 @@ mvnw.cmd
 *.ipr
 rebel.xml
 rebel-remote.xml
+.keystore
 
 ### NetBeans ###
 /nbproject/private/
