@@ -1,15 +1,17 @@
-package com.sun.zq.dao;
+package com.sun.zq.redis;
 
 import com.sun.zq.model.Person;
+import java.util.concurrent.TimeUnit;
 import javax.annotation.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
-@Repository
-public class PersonDao {
+@Component
+public class RedisUtil {
     @Autowired
     StringRedisTemplate stringRedisTemplate;
     @Resource(name="stringRedisTemplate")
@@ -33,5 +35,8 @@ public class PersonDao {
         return (Person)valOps.get("1");
     }
 
+    public void setKey(String key, Object value){
+        valOps.set(key, value, 10, TimeUnit.MINUTES);
+    }
 
 }
