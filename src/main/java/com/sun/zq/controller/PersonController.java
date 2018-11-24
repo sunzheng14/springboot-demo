@@ -4,10 +4,12 @@ import com.sun.zq.redis.RedisUtil;
 import com.sun.zq.model.Person;
 import com.sun.zq.service.PersonService;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Slf4j
 @RestController
 public class PersonController {
     @Autowired RedisUtil redisUtil;
@@ -45,6 +47,9 @@ public class PersonController {
 
     @RequestMapping("/list")
     public List<Person> list() {
+        log.debug("debug log = " + "hello");
+        log.error("error log = " + "hello");
+        log.info("info log = " + "hello");
         return personService.list();
     }
 

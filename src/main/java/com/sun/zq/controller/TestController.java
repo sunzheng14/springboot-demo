@@ -10,11 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/")
-public class TestCotroller {
+public class TestController {
     @Value("${book.author}")
     private String author;
     @Value("${book.name}")
     private String name;
+    @Value("${random.number}")
+    private String random;
 
     @Autowired
     private Book book;
@@ -35,5 +37,10 @@ public class TestCotroller {
     @RequestMapping("/getBook")
     public Book getBook() {
         return book;
+    }
+
+    @RequestMapping("/random")
+    public String getRandom() {
+        return random;
     }
 }
