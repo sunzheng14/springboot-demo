@@ -23,6 +23,7 @@ public class TestController {
 
     @RequestMapping("/index")
     public String test() {
+        int a = 4/0;
         return "hello spring boot";
     }
 
