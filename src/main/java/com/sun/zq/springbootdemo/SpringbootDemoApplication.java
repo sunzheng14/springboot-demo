@@ -2,6 +2,7 @@ package com.sun.zq.springbootdemo;
 
 import com.sun.zq.model.Address;
 import com.sun.zq.model.Book;
+import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Queue;
@@ -18,6 +19,7 @@ import org.springframework.context.annotation.PropertySource;
 @PropertySource(value = "")//引入配置文件
 @ServletComponentScan
 @Slf4j
+@EnableAdminServer
 public class SpringbootDemoApplication {
 
 	public static void main(String[] args) {

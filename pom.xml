@@ -109,10 +109,11 @@
 			<!--<version>2.1.9</version>-->
 		<!--</dependency>-->
 
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.boot</groupId>-->
-			<!--<artifactId>spring-boot-starter-security</artifactId>-->
-		<!--</dependency>-->
+		<!-- 开启安全认证 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -137,17 +138,16 @@
 			<artifactId>spring-boot-starter-amqp</artifactId>
 		</dependency>
 
-		<!--<dependency>-->
-			<!--<groupId>de.codecentric</groupId>-->
-			<!--<artifactId>spring-boot-admin-starter-server</artifactId>-->
-			<!--<version>2.0.3</version>-->
-		<!--</dependency>-->
+		<dependency>
+			<groupId>de.codecentric</groupId>
+			<artifactId>spring-boot-admin-starter-server</artifactId>
+			<version>2.0.3</version>
+		</dependency>
 		<!--<dependency>-->
 			<!--<groupId>de.codecentric</groupId>-->
 			<!--<artifactId>spring-boot-admin-server-ui</artifactId>-->
 			<!--<version>2.0.3</version>-->
 		<!--</dependency>-->
-
 		<!--<dependency>-->
 			<!--<groupId>de.codecentric</groupId>-->
 			<!--<artifactId>spring-boot-admin-starter-client</artifactId>-->
@@ -155,7 +155,7 @@
 		<!--</dependency>-->
 
 		<dependency>
-			<groupId>org.springframe.boot</groupId>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-json</artifactId>
 		</dependency>
 
@@ -168,7 +168,7 @@
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
+			<version>4.0.1</version>
 		</dependency>
 
 		<!-- spring boot 内置tomcat jsp支持 -->

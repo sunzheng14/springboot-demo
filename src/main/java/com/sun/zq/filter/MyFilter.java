@@ -4,6 +4,7 @@ package com.sun.zq.filter;
 import java.io.IOException;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -15,7 +16,8 @@ import org.springframework.stereotype.Component;
 @Slf4j
 @WebFilter(filterName = "myFilter", urlPatterns = "/")
 public class MyFilter implements Filter {
-    public void init() {
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
         log.info("my filter init...");
     }
 
@@ -37,7 +39,8 @@ public class MyFilter implements Filter {
         filterChain.doFilter(request, response);
     }
 
-    public void destory() {
+    @Override
+    public void destroy() {
         log.info("my filter 销毁");
     }
 }
